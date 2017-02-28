@@ -15,6 +15,9 @@
 		B08A0B7D1E65A69C004AD950 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A0B7B1E65A69C004AD950 /* LaunchScreen.storyboard */; };
 		B08A0B881E65A6AB004AD950 /* MyMVCDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B08A0B871E65A6AB004AD950 /* MyMVCDemoTests.m */; };
 		B08A0B931E65A6B0004AD950 /* MyMVCDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B08A0B921E65A6AF004AD950 /* MyMVCDemoUITests.m */; };
+		B08A0BA31E65A7CB004AD950 /* VNSessionLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B08A0BA21E65A7CB004AD950 /* VNSessionLib.m */; };
+		B08A0BA71E65A7E4004AD950 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B08A0BA51E65A7E4004AD950 /* DBManager.m */; };
+		B08A0BAA1E65A7F9004AD950 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B08A0BA91E65A7F9004AD950 /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		B08A0B8E1E65A6AE004AD950 /* MyMVCDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMVCDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A0B921E65A6AF004AD950 /* MyMVCDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyMVCDemoUITests.m; sourceTree = "<group>"; };
 		B08A0B941E65A6B1004AD950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B08A0BA11E65A7CB004AD950 /* VNSessionLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VNSessionLib.h; sourceTree = "<group>"; };
+		B08A0BA21E65A7CB004AD950 /* VNSessionLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VNSessionLib.m; sourceTree = "<group>"; };
+		B08A0BA41E65A7E4004AD950 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		B08A0BA51E65A7E4004AD950 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		B08A0BA61E65A7E4004AD950 /* HeaderAndConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderAndConstants.h; sourceTree = "<group>"; };
+		B08A0BA91E65A7F9004AD950 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B08A0BAA1E65A7F9004AD950 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +95,7 @@
 				B08A0B861E65A6A7004AD950 /* MyMVCDemoTests */,
 				B08A0B911E65A6AE004AD950 /* MyMVCDemoUITests */,
 				B08A0B6B1E65A68C004AD950 /* Products */,
+				B08A0BA81E65A7F8004AD950 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +128,10 @@
 		B08A0B6D1E65A68E004AD950 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B08A0BA41E65A7E4004AD950 /* DBManager.h */,
+				B08A0BA51E65A7E4004AD950 /* DBManager.m */,
+				B08A0BA61E65A7E4004AD950 /* HeaderAndConstants.h */,
+				B08A0BA01E65A7CB004AD950 /* VNSessionLib */,
 				B08A0B6E1E65A68E004AD950 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +153,23 @@
 				B08A0B941E65A6B1004AD950 /* Info.plist */,
 			);
 			path = MyMVCDemoUITests;
+			sourceTree = "<group>";
+		};
+		B08A0BA01E65A7CB004AD950 /* VNSessionLib */ = {
+			isa = PBXGroup;
+			children = (
+				B08A0BA11E65A7CB004AD950 /* VNSessionLib.h */,
+				B08A0BA21E65A7CB004AD950 /* VNSessionLib.m */,
+			);
+			path = VNSessionLib;
+			sourceTree = "<group>";
+		};
+		B08A0BA81E65A7F8004AD950 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B08A0BA91E65A7F9004AD950 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,9 +306,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B08A0BA31E65A7CB004AD950 /* VNSessionLib.m in Sources */,
 				B08A0B751E65A690004AD950 /* ViewController.m in Sources */,
 				B08A0B721E65A68F004AD950 /* AppDelegate.m in Sources */,
 				B08A0B6F1E65A68E004AD950 /* main.m in Sources */,
+				B08A0BA71E65A7E4004AD950 /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
